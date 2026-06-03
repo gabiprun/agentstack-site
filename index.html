@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgentStack — Real Estate Automation, Built by a Working Realtor</title>
+  <meta name="description" content="The automation suite a Victoria REALTOR® built to run his own business — MLS commands, instant contract PDFs, phone ID verification, FINTRAC, and a built-in undo for everything. Now available to agents and teams." />
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="AgentStack — Real Estate Automation Suite" />
+  <meta property="og:description" content="MLS commands, instant contracts, phone ID scanning, FINTRAC compliance — with a one-click undo on every change. Built by a working REALTOR®." />
+  <meta property="og:type" content="website" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    .gradient-text { background: linear-gradient(135deg, #60a5fa 0%, #2563eb 50%, #1e3a8a 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero-grid { background-image: linear-gradient(rgba(148,163,184,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(148,163,184,.07) 1px, transparent 1px); background-size: 44px 44px; }
+    .card-hover { transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -12px rgba(30,58,138,.18); border-color: #bfdbfe; }
+    .fade-up { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
+    .fade-up.in { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased">
+
+<!-- ============ NAV ============ -->
+<header class="sticky top-0 z-50 backdrop-blur bg-white/80 border-b border-slate-200">
+  <nav class="max-w-7xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-2.5">
+      <div class="w-9 h-9 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center shadow-sm">
+        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+          <polyline stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="9 22 9 12 15 12 15 22"/>
+        </svg>
+      </div>
+      <span class="font-extrabold text-lg tracking-tight text-slate-900">AgentStack</span>
+    </a>
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+      <a href="#features" class="hover:text-blue-600 transition-colors">Features</a>
+      <a href="#how" class="hover:text-blue-600 transition-colors">How it works</a>
+      <a href="#safety" class="hover:text-blue-600 transition-colors">Safety</a>
+      <a href="#pricing" class="hover:text-blue-600 transition-colors">Pricing</a>
+      <a href="#faq" class="hover:text-blue-600 transition-colors">FAQ</a>
+    </div>
+    <a href="#demo" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors shadow-sm">
+      Book a demo
+    </a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="top" class="relative overflow-hidden bg-white">
+  <div class="absolute inset-0 hero-grid"></div>
+  <div class="absolute -top-24 -right-24 w-96 h-96 bg-blue-200/40 rounded-full blur-3xl"></div>
+  <div class="absolute -bottom-32 -left-24 w-96 h-96 bg-indigo-200/30 rounded-full blur-3xl"></div>
+
+  <div class="relative max-w-7xl mx-auto px-5 sm:px-8 pt-16 pb-20 sm:pt-24 sm:pb-28 grid lg:grid-cols-2 gap-14 items-center">
+    <div>
+      <div class="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 text-blue-700 text-xs font-semibold px-3 py-1.5 rounded-full mb-6">
+        <span class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+        Built by a working VREB REALTOR® — not a software company
+      </div>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.05]">
+        Run your real estate business on
+        <span class="gradient-text">autopilot.</span>
+      </h1>
+      <p class="mt-6 text-lg text-slate-600 max-w-xl leading-relaxed">
+        AgentStack is the command center I built to run my own deals — MLS changes,
+        contract PDFs, ID verification, and FINTRAC compliance in one place. Every
+        action is one click, and every change has an undo button. Now it's open to other agents.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="#demo" class="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3.5 rounded-xl transition-colors shadow-lg shadow-blue-600/20">
+          Book a 15-min demo
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+        <a href="#features" class="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-700 font-semibold px-6 py-3.5 rounded-xl border border-slate-200 transition-colors">
+          See what it does
+        </a>
+      </div>
+      <div class="mt-8 flex items-center gap-6 text-sm text-slate-500">
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          No long-term contract
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          Your data stays yours
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero mock UI -->
+    <div class="relative">
+      <div class="absolute inset-0 bg-gradient-to-tr from-blue-600 to-indigo-500 rounded-3xl blur-2xl opacity-20 scale-95"></div>
+      <div class="relative bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden">
+        <div class="flex items-center gap-1.5 px-4 py-3 bg-slate-900">
+          <span class="w-3 h-3 rounded-full bg-red-400"></span>
+          <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+          <span class="w-3 h-3 rounded-full bg-green-400"></span>
+          <span class="ml-3 text-xs text-slate-400 font-mono">agentstack — command center</span>
+        </div>
+        <div class="p-5 space-y-3 bg-slate-50">
+          <div class="flex items-center justify-between bg-white rounded-xl border border-slate-200 px-4 py-3">
+            <div class="flex items-center gap-3">
+              <span class="w-9 h-9 bg-green-100 rounded-lg flex items-center justify-center"><svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></span>
+              <div><p class="text-sm font-semibold text-slate-900">Change listing price</p><p class="text-xs text-slate-400">MLS #984221 · $899,000 → $879,000</p></div>
+            </div>
+            <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">Done</span>
+          </div>
+          <div class="flex items-center justify-between bg-white rounded-xl border border-slate-200 px-4 py-3">
+            <div class="flex items-center gap-3">
+              <span class="w-9 h-9 bg-blue-100 rounded-lg flex items-center justify-center"><svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></span>
+              <div><p class="text-sm font-semibold text-slate-900">Contract of Purchase &amp; Sale</p><p class="text-xs text-slate-400">Generated PDF · 6 pages · 4.2s</p></div>
+            </div>
+            <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-semibold">Ready</span>
+          </div>
+          <div class="flex items-center justify-between bg-white rounded-xl border border-slate-200 px-4 py-3">
+            <div class="flex items-center gap-3">
+              <span class="w-9 h-9 bg-indigo-100 rounded-lg flex items-center justify-center"><svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0h4"/></svg></span>
+              <div><p class="text-sm font-semibold text-slate-900">ID verified</p><p class="text-xs text-slate-400">Licence scanned · DOB &amp; expiry captured</p></div>
+            </div>
+            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded-full font-semibold">FINTRAC ✓</span>
+          </div>
+          <div class="flex items-center gap-2 px-1 pt-1">
+            <svg class="w-4 h-4 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span class="text-xs text-slate-500">Auto-snapshot saved before every change · <span class="text-purple-600 font-semibold">Undo anytime</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOGO / TRUST BAR ============ -->
+<section class="bg-slate-900 py-8">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+    <div><p class="text-3xl font-extrabold text-white">6+ hrs</p><p class="text-sm text-slate-400 mt-1">saved per deal on admin</p></div>
+    <div><p class="text-3xl font-extrabold text-white">&lt; 5s</p><p class="text-sm text-slate-400 mt-1">to generate a contract PDF</p></div>
+    <div><p class="text-3xl font-extrabold text-white">1 click</p><p class="text-sm text-slate-400 mt-1">to undo any MLS change</p></div>
+    <div><p class="text-3xl font-extrabold text-white">100%</p><p class="text-sm text-slate-400 mt-1">FINTRAC ID capture</p></div>
+  </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section id="features" class="py-20 sm:py-28">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl mb-14">
+      <p class="text-blue-600 font-semibold text-sm uppercase tracking-wider mb-3">Everything in one place</p>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">The busywork, handled.</h2>
+      <p class="mt-4 text-lg text-slate-600">Each module replaces a chunk of your week. Use one, use all — they work together but stand on their own.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- MLS -->
+      <div class="card-hover bg-white rounded-2xl border border-slate-200 p-7">
+        <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2">MLS Commands</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">Change a price, pull a listing, run a search — real actions on your Matrix MLS account, driven for you. No more clicking through ten screens to drop a price.</p>
+      </div>
+
+      <!-- Contracts -->
+      <div class="card-hover bg-white rounded-2xl border border-slate-200 p-7">
+        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2">Instant Contracts</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">Fill once, generate a clean, signature-ready PDF in seconds. Your templates, your clauses, populated from client data — no retyping, no formatting fights.</p>
+      </div>
+
+      <!-- ID Scan -->
+      <div class="card-hover bg-white rounded-2xl border border-slate-200 p-7">
+        <div class="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0h4m-7 5h2m-2 4h6m2-4a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2">Phone ID Verification</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">Scan the barcode on the back of a driver's licence with your phone camera. Name, DOB, address and expiry captured instantly — right at the kitchen table.</p>
+      </div>
+
+      <!-- FINTRAC -->
+      <div class="card-hover bg-white rounded-2xl border border-slate-200 p-7">
+        <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2">FINTRAC, Done Right</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">ID verification flows straight into a complete FINTRAC declaration. Stay audit-ready without the paper shuffle or the "did I file that?" anxiety.</p>
+      </div>
+
+      <!-- Documents -->
+      <div class="card-hover bg-white rounded-2xl border border-slate-200 p-7">
+        <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2">Document Templates</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">A reusable library of your forms and letters. Merge client and property details automatically and produce consistent, professional paperwork every time.</p>
+      </div>
+
+      <!-- CRM -->
+      <div class="card-hover bg-white rounded-2xl border border-slate-200 p-7">
+        <div class="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m6-5.13a4 4 0 11-8 0 4 4 0 018 0zm6 3a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2">Client CRM</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">Buyers, sellers and contacts in one tidy list — feeding straight into your contracts and ID checks so you enter a client's details exactly once.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section id="how" class="py-20 sm:py-28 bg-white border-y border-slate-200">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl mb-16">
+      <p class="text-blue-600 font-semibold text-sm uppercase tracking-wider mb-3">From listing to close</p>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Three steps, not thirty.</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 relative">
+      <div class="relative">
+        <div class="text-6xl font-extrabold text-slate-100 absolute -top-6 -left-2 select-none">01</div>
+        <div class="relative">
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Pick the action</h3>
+          <p class="text-slate-600 leading-relaxed">Open the command center and choose what you need — drop a price, draft a contract, verify a client. Plain-language buttons, no menus to memorize.</p>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="text-6xl font-extrabold text-slate-100 absolute -top-6 -left-2 select-none">02</div>
+        <div class="relative">
+          <h3 class="text-xl font-bold text-slate-900 mb-2">It does the work</h3>
+          <p class="text-slate-600 leading-relaxed">AgentStack drives the MLS, builds the PDF, or reads the licence for you — taking a safety snapshot first so nothing is ever lost.</p>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="text-6xl font-extrabold text-slate-100 absolute -top-6 -left-2 select-none">03</div>
+        <div class="relative">
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Review &amp; relax</h3>
+          <p class="text-slate-600 leading-relaxed">See exactly what changed. Happy? Move on. Not happy? One click rolls it back. You're always in control.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SAFETY ============ -->
+<section id="safety" class="py-20 sm:py-28">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-14 items-center">
+    <div>
+      <div class="inline-flex items-center gap-2 bg-purple-50 border border-purple-100 text-purple-700 text-xs font-semibold px-3 py-1.5 rounded-full mb-6">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        The undo button automation never had
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Automation you can actually trust.</h2>
+      <p class="mt-5 text-lg text-slate-600 leading-relaxed">
+        The scary part of automating your MLS is "what if it does the wrong thing?" So every change that
+        writes anything takes a snapshot first. Made a typo on a price? Reverted in one click.
+        It's the difference between a tool you try once and a tool you run your business on.
+      </p>
+      <ul class="mt-8 space-y-4">
+        <li class="flex gap-3">
+          <svg class="w-6 h-6 text-purple-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          <span class="text-slate-700"><strong class="text-slate-900">Auto-snapshot</strong> before every write action — nothing happens without a save point.</span>
+        </li>
+        <li class="flex gap-3">
+          <svg class="w-6 h-6 text-purple-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          <span class="text-slate-700"><strong class="text-slate-900">Full version history</strong> — see every change with a timestamp and label.</span>
+        </li>
+        <li class="flex gap-3">
+          <svg class="w-6 h-6 text-purple-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          <span class="text-slate-700"><strong class="text-slate-900">One-click revert</strong> — roll back to any point without calling support.</span>
+        </li>
+        <li class="flex gap-3">
+          <svg class="w-6 h-6 text-purple-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          <span class="text-slate-700"><strong class="text-slate-900">Read vs. write</strong> clearly labelled — you always know when something will change.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-7 shadow-xl">
+      <div class="flex items-center justify-between mb-5">
+        <p class="text-white font-semibold">Snapshots</p>
+        <span class="text-xs bg-purple-500/20 text-purple-300 px-2.5 py-1 rounded-full font-semibold">Version history</span>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-center justify-between bg-white/5 hover:bg-white/10 transition-colors rounded-lg px-4 py-3">
+          <div><p class="text-sm text-white font-medium">Before price change · #984221</p><p class="text-xs text-slate-400">Today, 2:14 PM</p></div>
+          <button class="text-xs text-purple-300 hover:text-purple-200 font-semibold">Revert</button>
+        </div>
+        <div class="flex items-center justify-between bg-white/5 hover:bg-white/10 transition-colors rounded-lg px-4 py-3">
+          <div><p class="text-sm text-white font-medium">Before status update · #981004</p><p class="text-xs text-slate-400">Today, 11:02 AM</p></div>
+          <button class="text-xs text-purple-300 hover:text-purple-200 font-semibold">Revert</button>
+        </div>
+        <div class="flex items-center justify-between bg-white/5 hover:bg-white/10 transition-colors rounded-lg px-4 py-3">
+          <div><p class="text-sm text-white font-medium">Manual save · "end of day"</p><p class="text-xs text-slate-400">Yesterday, 6:30 PM</p></div>
+          <button class="text-xs text-purple-300 hover:text-purple-200 font-semibold">Revert</button>
+        </div>
+      </div>
+      <p class="text-xs text-slate-500 mt-5 text-center">Every write command lands here automatically.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BUILT BY A REALTOR ============ -->
+<section class="py-20 bg-blue-600 relative overflow-hidden">
+  <div class="absolute inset-0 hero-grid opacity-20"></div>
+  <div class="relative max-w-4xl mx-auto px-5 sm:px-8 text-center">
+    <svg class="w-10 h-10 text-blue-300 mx-auto mb-6" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+    <p class="text-2xl sm:text-3xl font-bold text-white leading-snug">
+      "I didn't build this to sell software. I built it because I was drowning in admin and wanted my evenings back. It works because I use it on my own deals every single day."
+    </p>
+    <div class="mt-8 flex items-center justify-center gap-3">
+      <div class="w-11 h-11 bg-white rounded-full flex items-center justify-center text-blue-700 font-extrabold">GP</div>
+      <div class="text-left">
+        <p class="text-white font-semibold">Gabriel Prundaru</p>
+        <p class="text-blue-200 text-sm">REALTOR® · VREB Agent 6084 · Victoria, BC</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section id="pricing" class="py-20 sm:py-28">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl mx-auto text-center mb-14">
+      <p class="text-blue-600 font-semibold text-sm uppercase tracking-wider mb-3">Simple pricing</p>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Pay for what saves you time.</h2>
+      <p class="mt-4 text-lg text-slate-600">Start with a demo. No card needed to see it run.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto items-stretch">
+      <!-- Solo -->
+      <div class="bg-white rounded-2xl border border-slate-200 p-8 flex flex-col">
+        <h3 class="text-lg font-bold text-slate-900">Solo</h3>
+        <p class="text-sm text-slate-500 mt-1">For the individual agent.</p>
+        <p class="mt-6"><span class="text-4xl font-extrabold text-slate-900">$49</span><span class="text-slate-500">/mo</span></p>
+        <ul class="mt-6 space-y-3 text-sm text-slate-600 flex-1">
+          <li class="flex gap-2"><svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Contracts &amp; document templates</li>
+          <li class="flex gap-2"><svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Phone ID scan &amp; FINTRAC</li>
+          <li class="flex gap-2"><svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Client CRM</li>
+          <li class="flex gap-2"><svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Email support</li>
+        </ul>
+        <a href="#demo" class="mt-8 inline-flex items-center justify-center bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold px-5 py-3 rounded-xl transition-colors">Start with a demo</a>
+      </div>
+
+      <!-- Pro (highlight) -->
+      <div class="bg-slate-900 rounded-2xl border-2 border-blue-500 p-8 flex flex-col relative shadow-2xl shadow-blue-600/20 md:-mt-4">
+        <span class="absolute top-0 right-6 -translate-y-1/2 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full">Most popular</span>
+        <h3 class="text-lg font-bold text-white">Pro</h3>
+        <p class="text-sm text-slate-400 mt-1">The full command center.</p>
+        <p class="mt-6"><span class="text-4xl font-extrabold text-white">$99</span><span class="text-slate-400">/mo</span></p>
+        <ul class="mt-6 space-y-3 text-sm text-slate-300 flex-1">
+          <li class="flex gap-2"><svg class="w-5 h-5 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Everything in Solo</li>
+          <li class="flex gap-2"><svg class="w-5 h-5 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><strong class="text-white">MLS commands</strong> &amp; automation</li>
+          <li class="flex gap-2"><svg class="w-5 h-5 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Snapshots &amp; one-click undo</li>
+          <li class="flex gap-2"><svg class="w-5 h-5 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Priority support</li>
+        </ul>
+        <a href="#demo" class="mt-8 inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-3 rounded-xl transition-colors">Book a demo</a>
+      </div>
+
+      <!-- Team -->
+      <div class="bg-white rounded-2xl border border-slate-200 p-8 flex flex-col">
+        <h3 class="text-lg font-bold text-slate-900">Team</h3>
+        <p class="text-sm text-slate-500 mt-1">For brokerages &amp; teams.</p>
+        <p class="mt-6"><span class="text-4xl font-extrabold text-slate-900">Let's talk</span></p>
+        <ul class="mt-6 space-y-3 text-sm text-slate-600 flex-1">
+          <li class="flex gap-2"><svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Everything in Pro</li>
+          <li class="flex gap-2"><svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Multiple agent seats</li>
+          <li class="flex gap-2"><svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Shared templates &amp; branding</li>
+          <li class="flex gap-2"><svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Onboarding &amp; training</li>
+        </ul>
+        <a href="#demo" class="mt-8 inline-flex items-center justify-center bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold px-5 py-3 rounded-xl transition-colors">Contact us</a>
+      </div>
+    </div>
+    <p class="text-center text-xs text-slate-400 mt-8">Pricing shown is illustrative — adjust to your launch plan.</p>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="py-20 sm:py-28 bg-white border-t border-slate-200">
+  <div class="max-w-3xl mx-auto px-5 sm:px-8">
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight text-center mb-12">Questions, answered.</h2>
+    <div class="space-y-3">
+      <details class="group bg-slate-50 rounded-xl border border-slate-200 p-5" open>
+        <summary class="flex items-center justify-between cursor-pointer font-semibold text-slate-900 list-none">
+          Will it mess up my live MLS listings?
+          <svg class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <p class="mt-3 text-slate-600 text-sm leading-relaxed">Every write action takes an automatic snapshot first, and read actions never change anything. If something looks off, you revert in one click. You review what happened before moving on.</p>
+      </details>
+      <details class="group bg-slate-50 rounded-xl border border-slate-200 p-5">
+        <summary class="flex items-center justify-between cursor-pointer font-semibold text-slate-900 list-none">
+          Do I need to be technical to use it?
+          <svg class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <p class="mt-3 text-slate-600 text-sm leading-relaxed">No. It's plain-language buttons — "change price", "scan ID", "generate contract". If you can use a website, you can use AgentStack.</p>
+      </details>
+      <details class="group bg-slate-50 rounded-xl border border-slate-200 p-5">
+        <summary class="flex items-center justify-between cursor-pointer font-semibold text-slate-900 list-none">
+          Is my client data safe?
+          <svg class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <p class="mt-3 text-slate-600 text-sm leading-relaxed">Your data stays yours. ID and FINTRAC information is captured for your records and compliance — not sold, not shared. We'll walk you through exactly where everything lives on a demo call.</p>
+      </details>
+      <details class="group bg-slate-50 rounded-xl border border-slate-200 p-5">
+        <summary class="flex items-center justify-between cursor-pointer font-semibold text-slate-900 list-none">
+          Does it work with my board's MLS?
+          <svg class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <p class="mt-3 text-slate-600 text-sm leading-relaxed">It's built and proven on Matrix MLS (VREB). On a demo we'll confirm fit for your board and walk through what's supported.</p>
+      </details>
+      <details class="group bg-slate-50 rounded-xl border border-slate-200 p-5">
+        <summary class="flex items-center justify-between cursor-pointer font-semibold text-slate-900 list-none">
+          What if I only want one piece of it?
+          <svg class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <p class="mt-3 text-slate-600 text-sm leading-relaxed">That's fine. Plenty of agents start with just contracts or just ID + FINTRAC. The modules stand on their own — add more whenever you're ready.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEMO / CTA ============ -->
+<section id="demo" class="py-20 sm:py-28">
+  <div class="max-w-5xl mx-auto px-5 sm:px-8">
+    <div class="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-3xl p-10 sm:p-14 grid lg:grid-cols-2 gap-10 items-center shadow-2xl">
+      <div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">See it run on a real deal.</h2>
+        <p class="mt-4 text-blue-100 text-lg leading-relaxed">Book a 15-minute screen share. I'll walk you through the exact workflow I use — and you decide if it'd save you the hours it saves me.</p>
+        <div class="mt-6 flex items-center gap-4 text-blue-100 text-sm">
+          <span class="flex items-center gap-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>No pressure</span>
+          <span class="flex items-center gap-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>No card needed</span>
+        </div>
+      </div>
+
+      <form class="bg-white rounded-2xl p-6 space-y-4" onsubmit="return handleDemoSubmit(event)">
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1">Name</label>
+          <input type="text" name="name" required class="w-full border border-slate-300 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Jane Agent" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1">Email</label>
+          <input type="email" name="email" required class="w-full border border-slate-300 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="jane@brokerage.com" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1">Brokerage / board</label>
+          <input type="text" name="brokerage" class="w-full border border-slate-300 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g. VREB" />
+        </div>
+        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-3 rounded-xl transition-colors">Request my demo</button>
+        <p id="form-msg" class="text-xs text-center text-slate-400">Takes 20 seconds. I'll email you to set a time.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-slate-900 py-12">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+    <div class="flex items-center gap-2.5">
+      <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
+        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+      </div>
+      <span class="font-bold text-white">AgentStack</span>
+    </div>
+    <p class="text-sm text-slate-400 text-center">Built in Victoria, BC by a working REALTOR®. © <span id="year"></span> AgentStack. Not affiliated with VREB or any MLS provider.</p>
+    <div class="flex items-center gap-5 text-sm text-slate-400">
+      <a href="#features" class="hover:text-white transition-colors">Features</a>
+      <a href="#pricing" class="hover:text-white transition-colors">Pricing</a>
+      <a href="#demo" class="hover:text-white transition-colors">Demo</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Scroll reveal
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+
+  // Demo form — front-end only; wire to your email/CRM/Formspree as needed.
+  function handleDemoSubmit(e) {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(e.target));
+    const msg = document.getElementById('form-msg');
+    // Simple mailto fallback so the lead reaches you with zero backend.
+    const subject = encodeURIComponent('AgentStack demo request — ' + (data.name || ''));
+    const body = encodeURIComponent(
+      'Name: ' + (data.name || '') + '\nEmail: ' + (data.email || '') + '\nBrokerage/board: ' + (data.brokerage || '')
+    );
+    window.location.href = 'mailto:jamesphipps077@gmail.com?subject=' + subject + '&body=' + body;
+    msg.textContent = "Opening your email app… thanks! I'll be in touch shortly.";
+    msg.className = 'text-xs text-center text-green-600 font-medium';
+    return false;
+  }
+</script>
+</body>
+</html>
